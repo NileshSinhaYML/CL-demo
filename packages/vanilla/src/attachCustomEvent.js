@@ -2,8 +2,8 @@
 import { landingPageConfig } from "./constants/landing.config";
 export const attachCustomEvent = () => {
   const customEventHandler = () => alert("clicked");
-  const indexELem = landingPageConfig?.options?.findIndex(
-    ({ name }) => name === "With custom Event"
+  const indexELem = landingPageConfig?.options?.findIndex(({ config }) =>
+    config?.menuLinks?.some(({ type }) => type === "button")
   );
   const customElem = document.querySelectorAll("header-component")[indexELem];
   const eventNames = landingPageConfig?.options[
