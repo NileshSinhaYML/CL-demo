@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "web-cl-demo-monorepo",
   "private": true,
   "devDependencies": {
     "lerna": "^4.0.0"
