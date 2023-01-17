@@ -1,4 +1,4 @@
-"use-strict";
+"use strict";
 import { landingPageConfig } from "./constants/landing.config";
 
 export const getHeaderVariants = () => {

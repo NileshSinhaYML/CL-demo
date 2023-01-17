@@ -1,4 +1,4 @@
-"use-strict";
+"use strict";
 import { withSlotConfigLight, withSlotConfig } from "./constants/header.config";
 import { imageSources } from "./constants/imageSources";
 import { landingPageConfig } from "./constants/landing.config";
@@ -16,6 +16,7 @@ const toggleTheme = () => {
   document.querySelectorAll(".app-landing-variant header-component")[
     arrIndex
   ].navOptions = isLightMode ? withSlotConfig : withSlotConfigLight;
+  document.querySelector(".avatar-btn").addEventListener("click", toggleTheme);
 };
 
 export { toggleTheme };

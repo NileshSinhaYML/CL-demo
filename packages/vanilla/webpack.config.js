@@ -11,6 +11,7 @@ module.exports = {
   devtool: "hidden-source-map",
   devServer: {
     static: path.join(__dirname, "dist"),
+    port: 4000,
   },
   module: {
     rules: [
