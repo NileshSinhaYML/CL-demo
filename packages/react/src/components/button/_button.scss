@@ -1,0 +1,13 @@
+@import '../../styles/_variables';
+
+.app-button {
+  color: $blue;
+
+  &-link {
+    text-decoration: overline;
+  }
+
+  &-danger {
+    color: $red;
+  }
+}

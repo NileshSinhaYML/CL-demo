@@ -1,0 +1,17 @@
+.app-avatar {
+
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+
+  &-text {
+    width: 30px;
+    height: 30px;
+    background-color: $white;
+  }
+
+  p {
+    font-weight: bold;
+    color: $black;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "start:react": "cd packages/react && yarn start",
+    "start:vue": "cd packages/vue && yarn serve"
+  }
+}

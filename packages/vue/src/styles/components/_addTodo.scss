@@ -1,0 +1,22 @@
+.app-add-todo-container {
+  width: 45%;
+  min-height: 200px;
+
+  &:first-of-type {
+    margin-right: 10%;
+  }
+
+  .card-main {
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    flex-direction: column;
+    padding: $spacing-m $spacing-xl;
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .app-input-bar {
+    width: 100%;
+  }
+}

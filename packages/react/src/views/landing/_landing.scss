@@ -1,0 +1,26 @@
+@import '../../styles/_spacings';
+@import '../../styles/variables';
+
+.app-landing {
+  padding: $spacing-xl;
+
+  &-variant {
+    margin-bottom: $spacing-xl;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: $spacing-m;
+    }
+
+    &-custom {
+      header-component::part(nav) {
+        background-color: $blue;
+      }
+    }
+  }
+}

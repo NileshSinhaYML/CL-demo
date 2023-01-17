@@ -1,0 +1,45 @@
+.app-add-todo-container {
+  .card-main {
+    @extend .justify-content-start;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: $spacing-xl;
+    }
+
+    ul {
+      width: 100%;
+    }
+
+    li {
+      padding-bottom: $spacing-m;
+      width: 100%;
+    }
+
+    .app-todo-list-item-done {
+      span {
+        text-decoration: line-through;
+      }
+    }
+
+    .actions-container {
+      @extend .d-flex;
+      @extend .justify-content-space-between;
+      width: 30%;
+
+      button {
+        text-decoration: underline;
+        font-weight: 600;
+
+        &:first-of-type {
+          color: $blue;
+        }
+
+        &:last-of-type {
+          color: $red;
+        }
+      }
+    }
+  }
+}

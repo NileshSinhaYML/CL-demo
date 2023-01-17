@@ -1,0 +1,15 @@
+@import '../../styles/_spacings';
+@import '../../styles/_variables';
+
+.app-input-bar {
+	label {
+		padding-bottom: $spacing-m;
+	}
+
+	input {
+		border: none;
+		outline: none;
+		border-bottom: 1px solid $light-grey;
+		width: 100%;
+	}
+}
