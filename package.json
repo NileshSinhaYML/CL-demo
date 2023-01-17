@@ -6,6 +6,7 @@
   },
   "scripts": {
     "start:react": "cd packages/react && yarn start",
-    "start:vue": "cd packages/vue && yarn serve"
+    "start:vue": "cd packages/vue && yarn serve",
+    "start:vanilla": "cd packages/vanilla && yarn dev-server"
   }
 }

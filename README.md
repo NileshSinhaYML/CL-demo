@@ -11,6 +11,8 @@ Provide an overview of the directory structure and files, for example:
  |-------- package.json => package json for react application
  |------ vue
  |-------- package.json => package json for vue application
+ |------ vanilla
+ |-------- package.json => package json for vanillaJS application
 ```
 
 ## Running instructions
@@ -25,3 +27,5 @@ To run a package:
 To run the react application in the root run `$ yarn start:react`
 
 To run the vue application in the root run `$ yarn start:vue`
+
+To run the vanillaJS application in the root run `$ yarn start:vanilla`
