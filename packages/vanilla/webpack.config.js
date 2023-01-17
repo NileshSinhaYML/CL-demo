@@ -19,6 +19,13 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: "file-loader",
+        options: {
+          name: "/dist/[name].[ext]",
+        },
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {

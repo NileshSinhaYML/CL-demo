@@ -1,7 +1,10 @@
 "use-strict";
 import "./third-party";
+
 import { getHeaderVariants } from "./getHeaderVariants";
 import { setCustomElementProps } from "./setCustomElementProps";
+import { toggleTheme } from "./toggleTheme";
+
 import "./styles/main.scss";
 
 (() => {
@@ -13,4 +16,5 @@ import "./styles/main.scss";
   setCustomElementProps().forEach((elem, index) => {
     document.querySelectorAll(".app-landing-variant")[index].appendChild(elem);
   });
+  document.querySelector(".avatar-btn").addEventListener("click", toggleTheme);
 })();

@@ -31,6 +31,11 @@ const withSlotConfig = {
   },
 };
 
+const withSlotConfigLight = {
+  ...withSlotConfig,
+  mode: "light",
+};
+
 const withCustomEvent = {
   ...defaultConfig,
   menuLinks: [
@@ -42,4 +47,10 @@ const withCustomEvent = {
   ],
 };
 
-export { defaultConfig, lightConfig, withSlotConfig, withCustomEvent };
+export {
+  defaultConfig,
+  lightConfig,
+  withSlotConfig,
+  withCustomEvent,
+  withSlotConfigLight,
+};
