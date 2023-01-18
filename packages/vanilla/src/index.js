@@ -8,16 +8,20 @@ import { toggleTheme } from "./toggleTheme";
 
 import "./styles/main.scss";
 
-(async () => {
+(() => {
   const app = document.querySelector("body");
   const containerDiv = document.createElement("div");
+  const appHeading = document.createElement("h1");
+  appHeading.textContent = "VanillaJS Application utilizing Header Component";
+  console.log(appHeading);
   containerDiv.setAttribute("id", "app");
   containerDiv.setAttribute("class", "app-landing");
-  containerDiv.innerHTML = getHeaderVariants();
+  containerDiv.appendChild(appHeading);
+  containerDiv.appendChild(getHeaderVariants());
   app.appendChild(containerDiv);
-  await setCustomElementProps().forEach((elem, index) => {
+  setCustomElementProps().forEach((elem, index) => {
     document.querySelectorAll(".app-landing-variant")[index].appendChild(elem);
   });
-  await toggleTheme();
-  await attachCustomEvent();
+  toggleTheme();
+  attachCustomEvent();
 })();

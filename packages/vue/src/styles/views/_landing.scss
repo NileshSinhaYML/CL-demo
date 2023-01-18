@@ -1,6 +1,12 @@
 .app-landing {
   padding: $spacing-xl;
 
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: $spacing-xl;
+  }
+
   &-variant {
     margin-bottom: $spacing-xl;
 
@@ -8,7 +14,7 @@
       margin-bottom: 0;
     }
 
-    h1 {
+    h2 {
       font-weight: bold;
       font-size: 1.5rem;
       margin-bottom: $spacing-m;

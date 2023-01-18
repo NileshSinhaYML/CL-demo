@@ -20,6 +20,7 @@ const Landing = () => {
 
   return (
     <div className="app-landing">
+      <h1>React Application utilizing Header Component</h1>
       {landingPageConfig?.options?.map(
         ({ name, config, hasCustomStyling, hasSlot }, index) => (
           <div
@@ -28,7 +29,7 @@ const Landing = () => {
               hasCustomStyling ? 'app-landing-variant-custom' : ''
             }`}
           >
-            <h1>{name}</h1>
+            <h2>{name}</h2>
             <header className="app-header">
               <Header
                 options={

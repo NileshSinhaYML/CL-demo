@@ -37,6 +37,7 @@ export default defineComponent({
 </script>
 <template>
   <div class="app-landing">
+    <h1>Vue Application utilizing Header Component</h1>
     <div
       v-for="(
         { name, config, hasCustomStyling, hasSlot }, index
@@ -46,7 +47,7 @@ export default defineComponent({
         hasCustomStyling ? 'app-landing-variant-custom' : ''
       }`"
     >
-      <h1>{{ name }}</h1>
+      <h2>{{ name }}</h2>
       <header class="header">
         <HeaderComponent
           :navOptions="
