@@ -28,5 +28,20 @@
         background-color: $blue;
       }
     }
+
+    .dropdown {
+      button {
+        border: none;
+        background-color: transparent;
+
+        >div {
+          border-radius: 50%;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
   }
 }

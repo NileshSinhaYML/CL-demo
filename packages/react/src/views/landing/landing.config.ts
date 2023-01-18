@@ -4,6 +4,7 @@ import {
   lightConfig,
   withSlotConfig,
   withCustomEvent,
+  withCustomElementPassedInSlot,
 } from './header.config';
 
 const landingPageConfig: LandingPageConfig = {
@@ -33,6 +34,12 @@ const landingPageConfig: LandingPageConfig = {
       name: 'With Custom Styling',
       config: defaultConfig,
       hasCustomStyling: true,
+    },
+    {
+      name: 'With Third party Avatar and dropdown',
+      config: withCustomElementPassedInSlot,
+      hasSlot: true,
+      hasSlotWithCustomComponents: true,
     },
   ],
 };

@@ -5,6 +5,7 @@ interface Variant {
   config: NavBarOptions;
   hasCustomStyling?: boolean;
   hasSlot?: boolean;
+  hasSlotWithCustomComponents?: boolean;
 }
 
 export interface LandingPageConfig {

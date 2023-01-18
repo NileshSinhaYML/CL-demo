@@ -9,7 +9,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "@vitejs/plugin-vue": "^4.0.0",
+    "bootstrap": "^5.2.3",
     "core-js": "^3.8.3",
     "register-service-worker": "^1.7.2",
     "uuid": "^9.0.0",

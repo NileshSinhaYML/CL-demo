@@ -1,16 +1,19 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import Header from '../../components/header/header';
-import Avatar from '../../components/avatar/avatar';
+import AvatarComponent from '../../components/avatar/avatar';
+import { Dropdown } from 'react-bootstrap';
 import { landingPageConfig } from './landing.config';
-import { imageSources } from '../../constants/views/Landing';
+import { imageSources, dropDownMenuItems } from '../../constants/views/Landing';
 
 import { AvatarTypes } from '../../constants/components/avatar';
 import { NavbarModes } from '../../constants/components/header';
 
 import './_landing.scss';
+import Avatar from 'react-avatar';
 
 const Landing = () => {
   const [isDarkMode, updateMode] = useState<boolean>(true);
+  const [showDropDown, toggleDropDown] = useState<boolean>(false);
   const getImageSource = (): string =>
     isDarkMode ? imageSources.dark : imageSources.light;
 
@@ -22,7 +25,16 @@ const Landing = () => {
     <div className="app-landing">
       <h1>React Application utilizing Header Component</h1>
       {landingPageConfig?.options?.map(
-        ({ name, config, hasCustomStyling, hasSlot }, index) => (
+        (
+          {
+            name,
+            config,
+            hasCustomStyling,
+            hasSlot,
+            hasSlotWithCustomComponents,
+          },
+          index
+        ) => (
           <div
             key={index}
             className={`app-landing-variant ${
@@ -43,12 +55,29 @@ const Landing = () => {
                 hasSlot={hasSlot}
                 on-button-click={customEventHandler}
               >
-                <Avatar
-                  type={AvatarTypes.Image}
-                  imageAlt="Theme Icon"
-                  source={getImageSource()}
-                  handleClick={() => updateMode(!isDarkMode)}
-                />
+                <>
+                  {hasSlotWithCustomComponents ? (
+                    <Dropdown>
+                      <Dropdown.Toggle>
+                        <Avatar name="Demo" size="35" />
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        {dropDownMenuItems?.map((item, key) => (
+                          <Dropdown.Item key={`${item}-${index}`}>
+                            {item}
+                          </Dropdown.Item>
+                        ))}
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  ) : (
+                    <AvatarComponent
+                      type={AvatarTypes.Image}
+                      imageAlt="Theme Icon"
+                      source={getImageSource()}
+                      handleClick={() => updateMode(!isDarkMode)}
+                    />
+                  )}
+                </>
               </Header>
             </header>
           </div>

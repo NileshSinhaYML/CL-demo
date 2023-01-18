@@ -43,4 +43,17 @@ const withCustomEvent: NavBarOptions = {
   ],
 };
 
-export { defaultConfig, lightConfig, withSlotConfig, withCustomEvent };
+const withCustomElementPassedInSlot: NavBarOptions = {
+  ...defaultConfig,
+  topRightSlot: {
+    slotName: 'avatar',
+  },
+};
+
+export {
+  defaultConfig,
+  lightConfig,
+  withSlotConfig,
+  withCustomEvent,
+  withCustomElementPassedInSlot,
+};
